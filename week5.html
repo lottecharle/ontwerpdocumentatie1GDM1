@@ -5,228 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Week 5 – Visual Studio Code</title>
 
-<style>
-:root {
-  --bg: #1f7a78;
-  --panel: #0d4f4e;
-  --panel-dark: #0b4241;
-  --text: #ffffff;
-}
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-/* ================= BASIS ================= */
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header {
-  width: 100%;
-  background: var(--bg);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.terug-button {
-  display: inline-block;
-  background-color: var(--panel);
-  color: #fff !important;
-  padding: 14px 36px;
-  border-radius: 28px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.terug-button:hover {
-  background-color: var(--panel-dark);
-  transform: translateY(-2px);
-}
-
-.week-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.week-nav a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.naam {
-  font-weight: 700;
-  font-size: 16px;
-  color: #fff !important;
-}
-
-.divider {
-  width: 50%;
-  height: 2px;
-  background-color: rgba(255,255,255,0.7);
-  margin-bottom: 20px;
-}
-
-/* ================= MAIN ================= */
-main {
-  flex: 1;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.page {
-  display: flex;
-  gap: 40px;
-  width: 100%;
-  max-width: 1400px;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-/* ================= LEFT PANEL ================= */
-.text-panel {
-  background-color: var(--panel);
-  padding: 40px;
-  border-radius: 16px;
-  flex: 2 1 600px;
-}
-
-.text-panel h1 {
-  font-size: 56px;
-  margin-bottom: 10px;
-}
-
-.text-panel h2 {
-  font-size: 30px;
-  margin: 20px 0;
-}
-
-.text-panel h3 {
-  font-size: 20px;
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-
-.text-panel p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-/* ================= RIGHT PANEL ================= */
-.screens {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1 1 300px;
-  max-width: 350px;
-}
-
-.screen-image {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  object-fit: cover;
-  cursor: pointer; /* klikbaar maken */
-}
-
-/* ================= LIGHTBOX OVERLAY ================= */
-#overlay {
-  display: none;
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--panel);
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-}
-
-footer a {
-  color: var(--text);
-  text-decoration: underline;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1000px) {
-  .page {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .screens {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-    justify-content: center;
-  }
-
-  .screen-image {
-    width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  .text-panel h1 { font-size: 36px; }
-  .text-panel h2 { font-size: 22px; }
-  .text-panel h3 { font-size: 18px; }
-  .text-panel p { font-size: 15px; }
-
-  .screens {
-    flex-direction: column;
-  }
-
-  .screen-image {
-    width: 100%;
-  }
-}
-</style>
+<!-- Eigen CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-[#1f7a78] text-white font-sans flex flex-col min-h-screen">
 
-<header>
-  <div class="header-left">
+<!-- HEADER -->
+<header class="flex flex-wrap justify-between items-center p-5 gap-4">
+  <div class="flex items-center gap-5">
     <a class="terug-button" href="index.html">HOME</a>
-    <nav class="week-nav">
+    <nav class="week-nav flex flex-wrap gap-3">
       <a href="week1.html">Week 1</a>
       <a href="week2.html">Week 2</a>
       <a href="week3.html">Week 3</a>
@@ -242,49 +34,54 @@ footer a {
       <a href="resultaat.html">Resultaat</a>
     </nav>
   </div>
-  <div class="naam">Lotte Charle – 1GDM1</div>
+  <div class="naam font-bold text-lg">Lotte Charle – 1GDM1</div>
 </header>
 
-<main>
-  <div class="page">
+<!-- MAIN -->
+<main class="flex-1 flex justify-center py-10 px-5 md:px-10">
+  <div class="page flex flex-wrap gap-10 max-w-[1400px] w-full items-start">
 
     <!-- LEFT PANEL -->
-    <section class="text-panel">
-      <h1>Week 5</h1>
-      <div class="divider"></div>
-      <h2>Eerste werking met Visual Studio Code</h2>
-      <h3>Feedback</h3>
-      <p>Ik heb feedback gevraagd op mijn nieuwe schermontwerpen. De algemene feedback was positief: de schermen zijn veel duidelijker, overzichtelijker en beter leesbaar dan voorheen.</p>
-      <h3>Opdracht</h3>
-      <p>De opdracht van deze week bestond uit het maken van eerste ontwerpen en lay-outs in Visual Studio Code op basis van de geleerde inzichten en met ondersteuning van ChatGPT. Daarnaast was het doel om kennis op te doen van GitHub en Netlify, zodat het project online gepubliceerd kan worden.</p>
-      <h3>Werkwijze</h3>
-      <p>Voor de werkwijze heb ik eerst inspiratie opgedaan door verschillende websites te bestuderen. Vervolgens heb ik schetsen gemaakt om een globale indeling en visualisatie te bepalen voordat ik begon met coderen. Daarna heb ik eenvoudige pagina’s ontwikkeld in Visual Studio Code om beter te begrijpen hoe het programma werkt en hoe HTML en CSS samen een lay-out vormen.</p>
-      <h3>Geleerde inzichten</h3>
-      <p>Tijdens deze week heb ik geleerd hoe een webpagina stap voor stap wordt opgebouwd in HTML en hoe CSS wordt gebruikt om de lay-out en opmaak te bepalen. Daarnaast heb ik inzicht gekregen in hoe ontwerpskeuzes uit schetsen en prototypes vertaald kunnen worden naar code. Ook heb ik geleerd hoe GitHub en Netlify gebruikt kunnen worden om een project online te publiceren.</p>
-      <h3>Vooruitblik naar volgende week</h3>
-      <p>Deze inzichten neem ik mee naar volgende week door verder te oefenen met HTML en CSS, mijn lay-outs verder te verfijnen en bewuster na te denken over structuur, overzicht en consistentie in mijn code en ontwerp.</p>
+    <section class="text-panel bg-[#0d4f4e] p-10 md:p-12 rounded-2xl flex-1 min-w-[300px]">
+      <h1 class="text-5xl font-black mb-3">Week 5</h1>
+      <div class="divider w-1/2 h-[2px] bg-white/70 mb-5"></div>
+      <h2 class="text-3xl font-extrabold my-5">Eerste werking met Visual Studio Code</h2>
+
+      <h3 class="text-xl font-semibold mt-7 mb-2">Feedback</h3>
+      <p class="text-lg leading-relaxed mb-6">Ik heb feedback gevraagd op mijn nieuwe schermontwerpen. De algemene feedback was positief: de schermen zijn veel duidelijker, overzichtelijker en beter leesbaar dan voorheen.</p>
+
+      <h3 class="text-xl font-semibold mt-7 mb-2">Opdracht</h3>
+      <p class="text-lg leading-relaxed mb-6">De opdracht van deze week bestond uit het maken van eerste ontwerpen en lay-outs in Visual Studio Code op basis van de geleerde inzichten en met ondersteuning van ChatGPT. Daarnaast was het doel om kennis op te doen van GitHub en Netlify, zodat het project online gepubliceerd kan worden.</p>
+
+      <h3 class="text-xl font-semibold mt-7 mb-2">Werkwijze</h3>
+      <p class="text-lg leading-relaxed mb-6">Voor de werkwijze heb ik eerst inspiratie opgedaan door verschillende websites te bestuderen. Vervolgens heb ik schetsen gemaakt om een globale indeling en visualisatie te bepalen voordat ik begon met coderen. Daarna heb ik eenvoudige pagina’s ontwikkeld in Visual Studio Code om beter te begrijpen hoe het programma werkt en hoe HTML en CSS samen een lay-out vormen.</p>
+
+      <h3 class="text-xl font-semibold mt-7 mb-2">Geleerde inzichten</h3>
+      <p class="text-lg leading-relaxed mb-6">Tijdens deze week heb ik geleerd hoe een webpagina stap voor stap wordt opgebouwd in HTML en hoe CSS wordt gebruikt om de lay-out en opmaak te bepalen. Daarnaast heb ik inzicht gekregen in hoe ontwerpskeuzes uit schetsen en prototypes vertaald kunnen worden naar code. Ook heb ik geleerd hoe GitHub en Netlify gebruikt kunnen worden om een project online te publiceren.</p>
+
+      <h3 class="text-xl font-semibold mt-7 mb-2">Vooruitblik naar volgende week</h3>
+      <p class="text-lg leading-relaxed mb-6">Deze inzichten neem ik mee naar volgende week door verder te oefenen met HTML en CSS, mijn lay-outs verder te verfijnen en bewuster na te denken over structuur, overzicht en consistentie in mijn code en ontwerp.</p>
     </section>
 
     <!-- RIGHT PANEL -->
-    <section class="screens">
-      <img src="img/centraalo1.jpg" alt="Afbeelding 1" class="screen-image clickable-image">
-      <img src="img/perrono1.jpg" alt="Afbeelding 2" class="screen-image clickable-image">
-      <img src="img/navio1.jpg" alt="Afbeelding 3" class="screen-image clickable-image">
+    <section class="screens flex flex-col gap-5 flex-1 min-w-[200px] max-w-[350px]">
+      <img src="img/centraalo1.jpg" alt="Afbeelding 1" class="screen-image clickable-image w-full rounded-lg object-cover shadow-lg">
+      <img src="img/perrono1.jpg" alt="Afbeelding 2" class="screen-image clickable-image w-full rounded-lg object-cover shadow-lg">
+      <img src="img/navio1.jpg" alt="Afbeelding 3" class="screen-image clickable-image w-full rounded-lg object-cover shadow-lg">
     </section>
 
   </div>
 </main>
 
 <!-- LIGHTBOX OVERLAY -->
-<div id="overlay" onclick="this.style.display='none'">
-  <img id="overlay-img" src="">
+<div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center z-50" onclick="this.style.display='none'">
+  <img id="overlay-img" class="max-w-[90%] max-h-[90%] rounded-lg" src="">
 </div>
 
-<footer>
-  <p>
-    Laatst gepubliceerde versie van mijn code op Github:
-    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
-  </p>
+<!-- FOOTER -->
+<footer class="bg-[#0d4f4e] p-5 text-center text-sm">
+  Laatst gepubliceerde versie van mijn code op Github:
+  <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline">Github-link</a>
 </footer>
 
 <script>
@@ -302,4 +99,3 @@ images.forEach(img => {
 
 </body>
 </html>
-

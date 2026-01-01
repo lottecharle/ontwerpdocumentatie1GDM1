@@ -4,246 +4,82 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Week 12</title>
-<style>
-:root {
-  --bg: #1f7a78;
-  --panel: #0d4f4e;
-  --panel-dark: #0b4241;
-  --text: #ffffff;
-  --accent: #cceeed;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  padding:20px;
-  gap:16px;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.terug-button {
-    display: inline-block;
-    background-color: var(--panel);
-    color: #fff!important;
-    padding: 14px 36px;
-    border-radius: 28px;
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-}
-
-.terug-button:hover {
-    background-color: #0b4241;
-    transform: translateY(-2px);
-}
-
-.week-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.week-nav a{
-  color:#fff;
-  text-decoration:underline;
-  font-weight:600;
-  font-size:14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* MAIN GRID LAYOUT */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1400px;
-  width: 90%;
-  margin: 40px auto;
-  gap: 40px;
-}
-
-/* CONTENT PANEL */
-.content {
-  background-color: var(--panel);
-  border-radius: 24px;
-  padding: 40px;
-}
-
-.content h1 { font-size: 48px; margin-bottom: 16px; }
-.divider { width: 50%; height: 3px; background-color: var(--text); margin: 20px 0 30px; opacity: 0.8; }
-.content h2 { font-size: 28px; margin-bottom: 16px; }
-.content h3 { font-size: 20px; margin-top: 20px; margin-bottom: 8px; }
-.content p { font-size: 16px; line-height: 1.6; margin-bottom: 16px; opacity: 0.9; }
-
-/* IMAGES PANEL */
-.images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.images img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  cursor: pointer; /* laat zien dat ze klikbaar zijn */
-}
-
-/* LIGHTBOX */
-#lightbox {
-  display: none;
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 16px;
-}
-
-/* FOOTER */
-footer {
-  background-color: var(--panel);
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-}
-
-footer a {
-  color: var(--text);
-  text-decoration: underline;
-}
-
-footer a:hover {
-  color: var(--accent);
-}
-
-/* RESPONSIVE */
-@media (max-width: 1000px) {
-  main { grid-template-columns: 1fr; }
-  .images { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 600px) {
-  .content h1 { font-size: 36px; }
-  .content h2 { font-size: 22px; }
-  .content h3 { font-size: 18px; }
-  .content p { font-size: 14px; }
-  .images { grid-template-columns: 1fr; }
-}
-</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-[#1f7a78] text-white min-h-screen flex flex-col">
 
-<header>
-  <div class="header-left">
-    <a class="terug-button" href="index.html">HOME</a>
-    <nav class="week-nav">
-      <a href="week1.html">Week 1</a>
-      <a href="week2.html">Week 2</a>
-      <a href="week3.html">Week 3</a>
-      <a href="week4.html">Week 4</a>
-      <a href="week5.html">Week 5</a>
-      <a href="week6.html">Week 6</a>
-      <a href="week7.html">Week 7</a>
-      <a href="week8.html">Week 8</a>
-      <a href="week9.html">Week 9</a>
-      <a href="week10.html">Week 10</a>
-      <a href="week11.html">Week 11</a>
-      <a href="week12.html">Week 12</a>
-      <a href="resultaat.html">Resultaat</a>
+<header class="flex flex-wrap items-center justify-between p-5 gap-4">
+  <div class="flex items-center gap-5">
+    <a class="terug-button inline-block bg-[#0d4f4e] text-white px-9 py-3 rounded-full font-extrabold text-xl shadow-md hover:bg-[#0b4241] transition-transform duration-150 transform hover:-translate-y-0.5" href="index.html">HOME</a>
+    <nav class="flex flex-wrap gap-3">
+      <a href="week1.html" class="underline font-semibold text-sm">Week 1</a>
+      <a href="week2.html" class="underline font-semibold text-sm">Week 2</a>
+      <a href="week3.html" class="underline font-semibold text-sm">Week 3</a>
+      <a href="week4.html" class="underline font-semibold text-sm">Week 4</a>
+      <a href="week5.html" class="underline font-semibold text-sm">Week 5</a>
+      <a href="week6.html" class="underline font-semibold text-sm">Week 6</a>
+      <a href="week7.html" class="underline font-semibold text-sm">Week 7</a>
+      <a href="week8.html" class="underline font-semibold text-sm">Week 8</a>
+      <a href="week9.html" class="underline font-semibold text-sm">Week 9</a>
+      <a href="week10.html" class="underline font-semibold text-sm">Week 10</a>
+      <a href="week11.html" class="underline font-semibold text-sm">Week 11</a>
+      <a href="week12.html" class="underline font-semibold text-sm">Week 12</a>
+      <a href="resultaat.html" class="underline font-semibold text-sm">Resultaat</a>
     </nav>
   </div>
-  <div class="naam">Lotte Charle – 1GDM1</div>
+  <div class="font-bold text-lg">Lotte Charle – 1GDM1</div>
 </header>
 
-<main>
-  <div class="content">
-    <h1>Week 12</h1>
-    <div class="divider"></div>
-    <h2>Mobiele schermen</h2>
-    <h3>Feedback</h3>
-    <p>Uit de feedback van de docenten bleek dat het belangrijk is om de volgorde van mijn pagina’s te herbekijken voor een logischere opbouw en dat typografische elementen beter zichtbaar moeten zijn, bijvoorbeeld door ze groter te maken zodat ze meer opvallen. Wel vonden ze het een goede keuze om over te schakelen naar een nieuwe kleurgroep omdat het een innovatiever gevoel gaf aan de applicatie. De feedback van de doelgroep liet zien dat het niet altijd duidelijk was waar interactieve elementen actief waren.</p>
-    <h3>Opdracht</h3>
-    <p>De opdracht deze week bestaat uit het verder uitwerken van de (interactieve) schermen en de app zo veel mogelijk afronden. Het doel is om de gebruikersflow volledig te laten functioneren en de app gebruiksvriendelijk en compleet te maken.</p>
-    <h3>Werkwijze</h3>
-    <p>Deze week ben ik te werk gegaan door eerst de ontvangen feedback toe te passen en de teksten groter en opvallender te maken. Daarnaast heb ik iconen toegevoegd voor interactieve elementen.</p>
-    <h3>Geleerde inzichten</h3>
-    <p>Kleine iconen kunnen een groot verschil maken in het duidelijk maken van interactieve elementen en veranderingen in tekstgrootte en kleur verbeteren de leesbaarheid.</p>
-    <h3>Vooruitblik naar volgende week</h3>
-    <p>Tegen volgende week wil ik de laatste test van de volledige app bij de doelgroep uitvoeren. Zo kan de app definitief worden afgerond en optimaal gebruiksvriendelijk gemaakt.</p>
+<main class="grid md:grid-cols-2 max-w-[1400px] w-[90%] mx-auto gap-10 my-10 flex-1">
+  <div class="content bg-[#0d4f4e] rounded-3xl p-10">
+    <h1 class="text-4xl mb-4">Week 12</h1>
+    <hr class="border-t-2 border-white/50 w-3/5 my-5">
+    <h2 class="text-2xl mb-4">Mobiele schermen</h2>
+    <h3 class="text-xl mt-5 mb-2">Feedback</h3>
+    <p class="text-base leading-relaxed mb-4">Uit de feedback van de docenten bleek dat het belangrijk is om de volgorde van mijn pagina’s te herbekijken voor een logischere opbouw en dat typografische elementen beter zichtbaar moeten zijn, bijvoorbeeld door ze groter te maken zodat ze meer opvallen. Wel vonden ze het een goede keuze om over te schakelen naar een nieuwe kleurgroep omdat het een innovatiever gevoel gaf aan de applicatie. De feedback van de doelgroep liet zien dat het niet altijd duidelijk was waar interactieve elementen actief waren.</p>
+    <h3 class="text-xl mt-5 mb-2">Opdracht</h3>
+    <p class="text-base leading-relaxed mb-4">De opdracht deze week bestaat uit het verder uitwerken van de (interactieve) schermen en de app zo veel mogelijk afronden. Het doel is om de gebruikersflow volledig te laten functioneren en de app gebruiksvriendelijk en compleet te maken.</p>
+    <h3 class="text-xl mt-5 mb-2">Werkwijze</h3>
+    <p class="text-base leading-relaxed mb-4">Deze week ben ik te werk gegaan door eerst de ontvangen feedback toe te passen en de teksten groter en opvallender te maken. Daarnaast heb ik iconen toegevoegd voor interactieve elementen.</p>
+    <h3 class="text-xl mt-5 mb-2">Geleerde inzichten</h3>
+    <p class="text-base leading-relaxed mb-4">Kleine iconen kunnen een groot verschil maken in het duidelijk maken van interactieve elementen en veranderingen in tekstgrootte en kleur verbeteren de leesbaarheid.</p>
+    <h3 class="text-xl mt-5 mb-2">Vooruitblik naar volgende week</h3>
+    <p class="text-base leading-relaxed mb-4">Tegen volgende week wil ik de laatste test van de volledige app bij de doelgroep uitvoeren. Zo kan de app definitief worden afgerond en optimaal gebruiksvriendelijk gemaakt.</p>
   </div>
 
-  <div class="images">
-    <img src="img/lw121.jpg" alt="Landschap 1" />
-    <img src="img/lw122.jpg" alt="Landschap 2" />
+  <div class="images grid grid-cols-2 gap-5">
+    <img src="img/lw121.jpg" alt="Landschap 1" class="clickable-image rounded-lg cursor-pointer">
+    <img src="img/lw122.jpg" alt="Landschap 2" class="clickable-image rounded-lg cursor-pointer">
   </div>
 </main>
 
-<!-- LIGHTBOX -->
-<div id="lightbox">
-  <img id="lightbox-img" src="">
+<!-- LIGHTBOX OVERLAY -->
+<div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center z-50" onclick="this.style.display='none'">
+  <img id="overlay-img" class="max-w-[90%] max-h-[90%] rounded-lg" src="">
 </div>
 
-<footer>
+<footer class="bg-[#0d4f4e] text-center p-5 text-sm">
   <p>Laatst gepubliceerde versie van mijn code op Github: 
-    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline">Github-link</a>
   </p>
 </footer>
 
 <script>
-const images = document.querySelectorAll('.images img');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
+  // Werkende lightbox zoals in jouw werkende voorbeeld
+  const images = document.querySelectorAll('.clickable-image');
+  const overlay = document.getElementById('overlay');
+  const overlayImg = document.getElementById('overlay-img');
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = img.src;
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      overlay.style.display = 'flex';  // zorgt dat overlay zichtbaar wordt
+      overlayImg.src = img.src;        // zet juiste afbeelding
+    });
   });
-});
 
-lightbox.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
+  // Overlay sluiten bij klikken (al ingesteld via onclick in HTML)
 </script>
 
 </body>
 </html>
-
-

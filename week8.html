@@ -5,179 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Week 8 – Tailwind CSS</title>
 
-<style>
-:root{
-    --bg: #1f7a78;
-    --panel: #0d4f4e;
-    --text: #ffffff;
-}
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between; /* ruimte tussen links en rechts */
-  flex-wrap:wrap;
-  padding:20px;
-  gap:16px;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.terug-button {
-    display: inline-block;
-    background-color: var(--panel);
-    color: #fff!important;
-    padding: 14px 36px;
-    border-radius: 28px;
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-    transition: transform .12s ease, background-color .12s ease;
-}
-
-.terug-button:hover {
-    background-color: #0b4241;
-    transform: translateY(-2px);
-}
-
-.week-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.week-nav a{
-  color:#fff;
-  text-decoration:underline;
-  font-weight:600;
-  font-size:14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* ================= CONTENT ================= */
-.page {
-    width: 90%;
-    max-width: 1200px;
-    margin: 80px auto 60px;
-    background-color: var(--panel);
-    border-radius: 25px;
-    padding: 60px 40px;
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.divider {
-    width: 220px;
-    height: 2px;
-    background-color: rgba(255,255,255,0.9);
-    margin-bottom: 30px;
-}
-
-h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 20px;
-    margin-top: 24px;
-    margin-bottom: 8px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background-color: var(--panel);
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: auto;
-}
-
-footer a {
-    color: var(--text);
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #cceeed;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-    .page {
-        padding: 50px 30px;
-    }
-    h1 { font-size: 40px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 18px; }
-    p { font-size: 15px; }
-}
-
-@media (max-width: 768px) {
-    .week-nav {
-        top: 90px;
-        left: 20px;
-        justify-content: center;
-    }
-    .page {
-        width: 95%;
-        padding: 40px 20px;
-        margin-top: 160px;
-    }
-    h1 { font-size: 36px; }
-    h2 { font-size: 22px; }
-    h3 { font-size: 16px; }
-    p { font-size: 14px; }
-}
-</style>
+<!-- Eigen style.css -->
+<link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#1f7a78] text-white font-sans flex flex-col min-h-screen">
 
-<body>
-
-<header>
-  <div class="header-left">
+<!-- HEADER -->
+<header class="flex flex-wrap justify-between items-center p-5 gap-4">
+  <div class="flex items-center gap-5">
     <a class="terug-button" href="index.html">HOME</a>
-
-    <nav class="week-nav">
+    <nav class="week-nav flex flex-wrap gap-3">
       <a href="week1.html">Week 1</a>
       <a href="week2.html">Week 2</a>
       <a href="week3.html">Week 3</a>
@@ -193,20 +33,35 @@ footer a:hover {
       <a href="resultaat.html">Resultaat</a>
     </nav>
   </div>
-
-  <div class="naam">Lotte Charle – 1GDM1</div>
+  <div class="naam font-bold text-lg">Lotte Charle – 1GDM1</div>
 </header>
 
+<!-- CONTENT -->
+<div class="page max-w-[1200px] mx-auto my-20 bg-[#0d4f4e] rounded-3xl p-16">
+  <h1 class="text-4xl font-bold mb-3">Week 8</h1>
+  <div class="divider inline-block w-[220px] h-[2px] bg-white/90 mb-8"></div>
+  <h2 class="text-2xl font-semibold mb-4">Tailwind CSS</h2>
 
-<div class="page">
-    <h1>Week 8</h1>
-    <div class="divider"></div>
-<h2>Tailwind CSS</h2> <h3>Feedback</h3> <p>Als feedback kreeg ik van docenten dat de layout goed en eenvoudig is, maar dat er nog ruimte is voor verbetering. Door meer alinea’s toe te voegen en te werken met duidelijke tussentitels kan het overzicht vergroot worden. Dit zorgt ervoor dat de usability verbetert, omdat gebruikers sneller kunnen navigeren naar de informatie die ze zoeken. Door deze aanpassingen wordt het ontwerp niet alleen overzichtelijker, maar ook gebruiksvriendelijker.</p> <h3>Opdracht</h3> <p>Deze week bestond de opdracht erin om te leren hoe je bestaande HTML kunt omzetten naar Tailwind CSS. Daarbij lag de focus op het vervangen van klassieke CSS door utility classes van Tailwind, met aandacht voor een overzichtelijke structuur, consistente styling en betere onderhoudbaarheid van de code.</p> <h3>Werkwijze</h3> <p>Tijdens de les kregen we eerst extra uitleg en meer achtergrondinformatie over het gebruik van Tailwind CSS en hoe bestaande HTML omgezet kan worden. Nadien ben ik als eerst aan de slag gegaan met de feedback toe te passen op mijn pagina’s. Vervolgens ben ik stap voor stap aan de slag gegaan met de opdracht, waarbij ik de bestaande HTML heb herwerkt en de klassieke CSS heb vervangen door Tailwind CSS-classes. Hierbij heb ik aandacht besteed aan overzicht, consistentie en gebruiksvriendelijkheid.</p> <h3>Geleerde inzichten</h3> <p>Tijdens deze opdracht heb ik geleerd hoe bestaande HTML efficiënter kan worden opgebouwd met behulp van Tailwind CSS. Ik heb inzicht gekregen in het gebruik van utility classes en hoe deze kunnen bijdragen aan een overzichtelijke en consistente layout zonder aparte CSS-bestanden.</p> <h3>Vooruitblik naar volgende week</h3> <p>De werkwijze die ik deze week heb geleerd, zal ik de komende weken toepassen bij het maken van de volgende pagina’s. Door vanaf het begin te werken met Tailwind CSS kan ik efficiënter werken. Dit zal zorgen voor een vlottere ontwikkeling van de pagina’s, een consistentere layout en een beter georganiseerd eindresultaat.</p> </div>
+  <h3 class="text-xl mt-6 mb-2">Feedback</h3>
+  <p class="mb-5 opacity-90">Als feedback kreeg ik van docenten dat de layout goed en eenvoudig is, maar dat er nog ruimte is voor verbetering. Door meer alinea’s toe te voegen en te werken met duidelijke tussentitels kan het overzicht vergroot worden. Dit zorgt ervoor dat de usability verbetert, omdat gebruikers sneller kunnen navigeren naar de informatie die ze zoeken. Door deze aanpassingen wordt het ontwerp niet alleen overzichtelijker, maar ook gebruiksvriendelijker.</p>
 
-<footer>
-    <p>Laatst gepubliceerde versie van mijn code op Github: 
-        <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
-    </p>
+  <h3 class="text-xl mt-6 mb-2">Opdracht</h3>
+  <p class="mb-5 opacity-90">Deze week bestond de opdracht erin om te leren hoe je bestaande HTML kunt omzetten naar Tailwind CSS. Daarbij lag de focus op het vervangen van klassieke CSS door utility classes van Tailwind, met aandacht voor een overzichtelijke structuur, consistente styling en betere onderhoudbaarheid van de code.</p>
+
+  <h3 class="text-xl mt-6 mb-2">Werkwijze</h3>
+  <p class="mb-5 opacity-90">Tijdens de les kregen we eerst extra uitleg en meer achtergrondinformatie over het gebruik van Tailwind CSS en hoe bestaande HTML omgezet kan worden. Nadien ben ik als eerst aan de slag gegaan met de feedback toe te passen op mijn pagina’s. Vervolgens ben ik stap voor stap aan de slag gegaan met de opdracht, waarbij ik de bestaande HTML heb herwerkt en de klassieke CSS heb vervangen door Tailwind CSS-classes. Hierbij heb ik aandacht besteed aan overzicht, consistentie en gebruiksvriendelijkheid.</p>
+
+  <h3 class="text-xl mt-6 mb-2">Geleerde inzichten</h3>
+  <p class="mb-5 opacity-90">Tijdens deze opdracht heb ik geleerd hoe bestaande HTML efficiënter kan worden opgebouwd met behulp van Tailwind CSS. Ik heb inzicht gekregen in het gebruik van utility classes en hoe deze kunnen bijdragen aan een overzichtelijke en consistente layout zonder aparte CSS-bestanden.</p>
+
+  <h3 class="text-xl mt-6 mb-2">Vooruitblik naar volgende week</h3>
+  <p class="mb-5 opacity-90">De werkwijze die ik deze week heb geleerd, zal ik de komende weken toepassen bij het maken van de volgende pagina’s. Door vanaf het begin te werken met Tailwind CSS kan ik efficiënter werken. Dit zal zorgen voor een vlottere ontwikkeling van de pagina’s, een consistentere layout en een beter georganiseerd eindresultaat.</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-[#0d4f4e] p-5 text-center text-sm mt-auto">
+  Laatst gepubliceerde versie van mijn code op Github: 
+  <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline hover:text-[#cceeed]">Github-link</a>
 </footer>
 
 </body>

@@ -1,288 +1,98 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Week 3 – Mid-fidelity prototype</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 3 – Mid-fidelity prototype</title>
 
-<style>
-/* ================= BASIS ================= */
-:root{
-  --bg:#1f7a78;
-  --panel:#0d4f4e;
-  --panel-dark:#0b4241;
-  --text:#ffffff;
-}
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header {
-  width: 100%;
-  background: var(--bg);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.terug-button {
-  display: inline-block;
-  background-color: var(--panel);
-  color: #fff !important;
-  padding: 14px 36px;
-  border-radius: 28px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-}
-
-.terug-button:hover {
-  background-color: var(--panel-dark);
-  transform: translateY(-2px);
-}
-
-.week-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.week-nav a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* ================= MAIN ================= */
-main {
-  padding-top: 60px;
-}
-
-.page {
-  width: 100%;
-  max-width: 1600px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  padding: 40px 20px;
-  align-items: start;
-}
-
-/* ================= LEFT PANEL ================= */
-.intro {
-  background: var(--panel);
-  padding: 40px;
-  border-radius: 16px;
-}
-
-.intro h1 {
-  font-size: 56px;
-  margin: 0 0 10px;
-}
-
-.intro hr {
-  border: none;
-  height: 2px;
-  background: rgba(255,255,255,0.7);
-  width: 260px;
-  margin: 20px 0 30px;
-}
-
-.intro h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.intro h3 {
-  margin-top: 28px;
-  font-size: 20px;
-}
-
-.intro p {
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* ================= RIGHT PANEL ================= */
-.screens {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.screen-image {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  cursor: pointer; /* klikbaar maken */
-}
-
-/* ================= LIGHTBOX OVERLAY ================= */
-#overlay {
-  display: none;
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--panel);
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1200px) {
-  .page {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  main {
-    padding-top: 180px;
-  }
-
-  .intro h1 {
-    font-size: 36px;
-  }
-
-  .intro h2 {
-    font-size: 22px;
-  }
-
-  .intro p {
-    font-size: 15px;
-  }
-}
-</style>
+  <!-- Eigen CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#1f7a78] text-white font-sans flex flex-col min-h-screen">
 
-<body>
+  <!-- HEADER -->
+  <header class="flex flex-wrap justify-between items-center p-5 gap-4">
+    <div class="flex items-center gap-5">
+      <a class="terug-button" href="index.html">HOME</a>
+      <nav class="week-nav flex flex-wrap gap-3">
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+        <a href="week3.html">Week 3</a>
+        <a href="week4.html">Week 4</a>
+        <a href="week5.html">Week 5</a>
+        <a href="week6.html">Week 6</a>
+        <a href="week7.html">Week 7</a>
+        <a href="week8.html">Week 8</a>
+        <a href="week9.html">Week 9</a>
+        <a href="week10.html">Week 10</a>
+        <a href="week11.html">Week 11</a>
+        <a href="week12.html">Week 12</a>
+        <a href="resultaat.html">Resultaat</a>
+      </nav>
+    </div>
+    <div class="naam font-bold text-lg">Lotte Charle – 1GDM1</div>
+  </header>
 
-<header>
-  <div class="header-left">
-    <a class="terug-button" href="index.html">HOME</a>
-    <nav class="week-nav">
-      <a href="week1.html">Week 1</a>
-      <a href="week2.html">Week 2</a>
-      <a href="week3.html">Week 3</a>
-      <a href="week4.html">Week 4</a>
-      <a href="week5.html">Week 5</a>
-      <a href="week6.html">Week 6</a>
-      <a href="week7.html">Week 7</a>
-      <a href="week8.html">Week 8</a>
-      <a href="week9.html">Week 9</a>
-      <a href="week10.html">Week 10</a>
-      <a href="week11.html">Week 11</a>
-      <a href="week12.html">Week 12</a>
-      <a href="resultaat.html">Resultaat</a>
-    </nav>
+  <!-- MAIN -->
+  <main class="flex-1 flex justify-center pt-20 px-5 md:px-10 pb-16">
+    <div class="page max-w-[1600px] grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-10 items-start md:items-stretch">
+
+      <!-- LEFT: Tekst -->
+      <section class="intro bg-[#0d4f4e] p-10 rounded-xl flex flex-col">
+        <h1 class="text-5xl font-bold mb-3">Week 3</h1>
+        <hr class="border-t-2 border-white/70 w-64 my-5">
+        <h2 class="text-2xl font-semibold mb-5">Mid-fidelity prototype</h2>
+
+        <h3 class="mt-6 mb-2 text-xl font-semibold">Opdracht</h3>
+        <p>De opdracht van deze week was om de eerder gemaakte schetsen en wireframes verder uit te werken in Figma. Het doel was om deze om te zetten naar een mid-fidelity prototype, waarbij vooral werd gekeken naar structuur, indeling en functionaliteit, en waarin kon worden geëxperimenteerd met kleuren en typografie.</p>
+
+        <h3 class="mt-6 mb-2 text-xl font-semibold">Werkwijze</h3>
+        <p>Ik ben begonnen met het bekijken van mijn eerdere schetsen en wireframes om een duidelijk plan te maken voor het prototype. In Figma heb ik stap voor stap de schermen opgebouwd, waarbij ik experimenteerde met de indeling en opmaak om te controleren of de geplande functies logisch op het scherm pasten en of de visuele structuur klopte. Daarnaast heb ik een eerste aanzet gemaakt voor het gebruik van kleuren, lettertypes en beeldmateriaal, zonder al te veel nadruk op de uiteindelijke stijl.</p>
+
+        <h3 class="mt-6 mb-2 text-xl font-semibold">Geleerde inzichten</h3>
+        <p>Door het werken in Figma heb ik geleerd hoe belangrijk een goede structuur en duidelijke hiërarchie zijn binnen een ontwerp. Ik heb ervaren dat het experimenteren met indeling en opmaak helpt om functies logisch te positioneren en de visuele samenhang te controleren. Daarnaast heb ik inzicht gekregen in het gebruik van kleuren, typografie en beeldmateriaal, en hoe je hiermee kunt spelen zonder dat de uiteindelijke stijl al vastligt.</p>
+
+        <h3 class="mt-6 mb-2 text-xl font-semibold">Vooruitblik naar volgende week</h3>
+        <p>Volgende week ga ik actief feedback vragen rond mijn mid-fidelity prototype om te bekijken welke aanpassingen ik kan doorvoeren zodat mijn schermen gebruiksvriendelijk zijn, de elementen functioneel en overzichtelijk zijn, belangrijke onderdelen opvallen en de visuele hiërarchie duidelijk is. Dit is extra belangrijk omdat het mijn eerste keer is dat ik met Figma werk, en ik wil vooral inzicht krijgen in hoe ik mijn ontwerp kan verbeteren op basis van nuttige tips en reacties van anderen zoals docenten en medestudenten.</p>
+      </section>
+
+      <!-- RIGHT: Afbeeldingen -->
+      <section class="screens flex flex-col gap-6">
+        <img src="img/ontwerp1.jpg" alt="Vertrekscherm" class="screen-image clickable-image w-full max-h-[500px] object-cover rounded-lg">
+        <img src="img/ontwerp2.jpg" alt="Treindetail scherm" class="screen-image clickable-image w-full max-h-[500px] object-cover rounded-lg">
+        <img src="img/ontwerp3.jpg" alt="Volgende halte scherm" class="screen-image clickable-image w-full max-h-[500px] object-cover rounded-lg">
+      </section>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center z-50" onclick="this.style.display='none'">
+    <img id="overlay-img" class="max-w-[90%] max-h-[90%] rounded-lg" src="">
   </div>
-  <div class="naam">Lotte Charle – 1GDM1</div>
-</header>
 
-<main>
-  <div class="page">
-
-  <section class="intro"> 
-    <h1>Week 3</h1> 
-    <hr /> 
-    <h2>Mid-fidelity prototype</h2> 
-    <h3>Opdracht</h3> 
-    <p>De opdracht van deze week was om de eerder gemaakte schetsen en wireframes verder uit te werken in Figma. Het doel was om deze om te zetten naar een mid-fidelity prototype, waarbij vooral werd gekeken naar structuur, indeling en functionaliteit, en waarin kon worden geëxperimenteerd met kleuren en typografie.</p> 
-    <h3>Werkwijze</h3>
-    <p>Ik ben begonnen met het bekijken van mijn eerdere schetsen en wireframes om een duidelijk plan te maken voor het prototype. In Figma heb ik stap voor stap de schermen opgebouwd, waarbij ik experimenteerde met de indeling en opmaak om te controleren of de geplande functies logisch op het scherm pasten en of de visuele structuur klopte. Daarnaast heb ik een eerste aanzet gemaakt voor het gebruik van kleuren, lettertypes en beeldmateriaal, zonder al te veel nadruk op de uiteindelijke stijl.</p> 
-    <h3>Geleerde inzichten</h3>
-    <p>Door het werken in Figma heb ik geleerd hoe belangrijk een goede structuur en duidelijke hiërarchie zijn binnen een ontwerp. Ik heb ervaren dat het experimenteren met indeling en opmaak helpt om functies logisch te positioneren en de visuele samenhang te controleren. Daarnaast heb ik inzicht gekregen in het gebruik van kleuren, typografie en beeldmateriaal, en hoe je hiermee kunt spelen zonder dat de uiteindelijke stijl al vastligt.</p> 
-    <h3>Vooruitblik naar volgende week</h3>
-    <p>Volgende week ga ik actief feedback vragen rond mijn mid-fidelity prototype om te bekijken welke aanpassingen ik kan doorvoeren zodat mijn schermen gebruiksvriendelijk zijn, de elementen functioneel en overzichtelijk zijn, belangrijke onderdelen opvallen en de visuele hiërarchie duidelijk is. Dit is extra belangrijk omdat het mijn eerste keer is dat ik met Figma werk, en ik wil vooral inzicht krijgen in hoe ik mijn ontwerp kan verbeteren op basis van nuttige tips en reacties van anderen zoals docenten en medestudenten.</p>
-  </section>
-
-  <!-- RIGHT -->
-  <section class="screens">
-    <img src="img/ontwerp1.jpg" alt="Vertrekscherm" class="screen-image clickable-image">
-    <img src="img/ontwerp2.jpg" alt="Treindetail scherm" class="screen-image clickable-image">
-    <img src="img/ontwerp3.jpg" alt="Volgende halte scherm" class="screen-image clickable-image">
-  </section>
-
-</div>
-</main>
-
-<!-- LIGHTBOX OVERLAY -->
-<div id="overlay" onclick="this.style.display='none'">
-  <img id="overlay-img" src="">
-</div>
-
-<footer>
-  <p>
+  <!-- FOOTER -->
+  <footer class="bg-[#0d4f4e] p-5 text-center text-sm">
     Laatst gepubliceerde versie van mijn code op Github:
-    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
-  </p>
-</footer>
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline">Github-link</a>
+  </footer>
 
-<script>
-const images = document.querySelectorAll('.clickable-image');
-const overlay = document.getElementById('overlay');
-const overlayImg = document.getElementById('overlay-img');
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    overlay.style.display = 'flex';
-    overlayImg.src = img.src;
-  });
-});
-</script>
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        overlayImg.src = img.src;
+      });
+    });
+  </script>
 
 </body>
 </html>

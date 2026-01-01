@@ -1,275 +1,108 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Week 2</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2</title>
 
-<style>
-/* ================= BASIS ================= */
-:root{
-  --bg:#1f7a78;
-  --panel:#0d4f4e;
-  --panel-dark:#0b4241;
-  --text:#ffffff;
-}
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-* {
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between; /* ruimte tussen links en rechts */
-  flex-wrap:wrap;
-  padding:20px;
-  gap:16px;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.terug-button {
-    display: inline-block;
-    background-color: var(--panel);
-    color: #fff!important;
-    padding: 14px 36px;
-    border-radius: 28px;
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-    transition: transform .12s ease, background-color .12s ease;
-}
-
-.terug-button:hover {
-    background-color: #0b4241;
-    transform: translateY(-2px);
-}
-
-.week-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.week-nav a{
-  color:#fff;
-  text-decoration:underline;
-  font-weight:600;
-  font-size:14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* ================= MAIN ================= */
-main {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  padding-top: 120px;
-}
-
-.container {
-  width: 100%;
-  max-width: 1800px;
-  display: flex;
-  gap: 24px;
-  padding: 20px;
-}
-
-.card {
-  background: white;
-  border-radius: 14px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.card.left img,
-.card.right img {
-  width: 80%;
-  height: auto;
-}
-
-.card.center {
-  flex: 1.6;
-  background: var(--panel);
-  color: white;
-  padding: 32px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* ================= TEKST ================= */
-.title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.divider {
-  height: 2px;
-  width: 42%;
-  background: rgba(255,255,255,0.6);
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.text h3 {
-  margin-top: 24px;
-  margin-bottom: 8px;
-  font-size: 20px;
-}
-
-.text p {
-  margin: 0 0 16px;
-  line-height: 1.6;
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--panel);
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1200px) {
-  .container {
-    flex-wrap: wrap;
-  }
-
-  .card.center {
-    order: -1;
-    flex: 1 1 100%;
-  }
-
-  .card.left,
-  .card.right {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  main {
-    padding-top: 180px;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .card.left img,
-  .card.right img {
-    width: 100%;
-  }
-
-  .title {
-    font-size: 32px;
-  }
-
-  .subtitle {
-    font-size: 22px;
-  }
-}
-</style>
+  <!-- Eigen CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#1f7a78] text-white font-sans min-h-screen flex flex-col">
 
-<body>
+  <!-- HEADER -->
+  <header class="flex flex-wrap justify-between items-center p-5 gap-4">
+    <div class="flex items-center gap-5">
+      <a class="terug-button" href="index.html">HOME</a>
 
-<header>
-  <div class="header-left">
-    <a class="terug-button" href="index.html">HOME</a>
+      <nav class="week-nav flex flex-wrap gap-3">
+        <a href="week1.html">Week 1</a>
+        <a href="week2.html">Week 2</a>
+        <a href="week3.html">Week 3</a>
+        <a href="week4.html">Week 4</a>
+        <a href="week5.html">Week 5</a>
+        <a href="week6.html">Week 6</a>
+        <a href="week7.html">Week 7</a>
+        <a href="week8.html">Week 8</a>
+        <a href="week9.html">Week 9</a>
+        <a href="week10.html">Week 10</a>
+        <a href="week11.html">Week 11</a>
+        <a href="week12.html">Week 12</a>
+        <a href="resultaat.html">Resultaat</a>
+      </nav>
+    </div>
 
-    <nav class="week-nav">
-      <a href="week1.html">Week 1</a>
-      <a href="week2.html">Week 2</a>
-      <a href="week3.html">Week 3</a>
-      <a href="week4.html">Week 4</a>
-      <a href="week5.html">Week 5</a>
-      <a href="week6.html">Week 6</a>
-      <a href="week7.html">Week 7</a>
-      <a href="week8.html">Week 8</a>
-      <a href="week9.html">Week 9</a>
-      <a href="week10.html">Week 10</a>
-      <a href="week11.html">Week 11</a>
-      <a href="week12.html">Week 12</a>
-      <a href="resultaat.html">Resultaat</a>
-    </nav>
+    <div class="naam font-bold text-lg">Lotte Charle – 1GDM1</div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex justify-center pt-20 px-5 md:px-10 pb-16">
+    <!-- pb-16 voorkomt dat tekst of afbeeldingen de footer raken -->
+    <div class="container max-w-[1800px] grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] gap-6 items-start md:items-stretch">
+
+      <!-- Linker afbeelding -->
+      <div class="flex justify-center items-start md:items-center">
+        <img src="img/studay.jpg" alt="Study Day"
+             class="rounded-lg cursor-pointer clickable-image w-full max-w-[300px] max-h-[500px] object-cover">
+      </div>
+
+      <!-- Tekstcontent -->
+      <div class="bg-[#0d4f4e] p-8 rounded-xl flex flex-col text-white">
+        <h1 class="text-4xl font-bold mb-3">Week 2</h1>
+        <hr class="border-t-2 border-white/50 w-2/5 mb-5">
+        <h2 class="text-2xl font-semibold mb-3">Kennismaking met Figma</h2>
+
+        <div class="text overflow-auto">
+          <h3 class="mt-6 mb-2 text-xl font-semibold">Opdracht</h3>
+          <p>Deze week vond het event Studay plaats, waardoor er geen lesmoment en geen officiële opdracht voorzien waren. Omdat ik volgende week start met het ontwerpen van de informatieschermen, heb ik deze tijd benut om mij voor te bereiden. Aangezien ik nog geen ervaring had met het programma Figma, heb ik de week gebruikt om me hierin te verdiepen zodat ik volgende week kan starten met het uitwerken van de ontwerpen.</p>
+
+          <h3 class="mt-6 mb-2 text-xl font-semibold">Werkwijze</h3>
+          <p>Ik ben begonnen met het doornemen van het boek “Prototyping – Figma Essentials”, een toegankelijke gids voor beginners die een volledig overzicht biedt van digitale vormgeving en interactieve prototyping in Figma. Het boek leidt je stap voor stap door het ontwerpproces: het opzetten van projecten, het maken van wireframes, het bouwen van interactieve prototypes en het voorbereiden van ontwerpen voor ontwikkeling. Daarnaast behandelt het boek belangrijke thema’s zoals samenwerken in real time, feedback delen, gebruikerstesten en het integreren van Tailwind CSS-concepten in Figma. Ook laat het zien hoe je ontwerpen efficiënt kunt exporteren naar code. Door deze verdieping krijg ik een helder beeld van hoe ik Figma kan gebruiken om professionele digitale producten te ontwerpen en presenteren.</p>
+
+          <h3 class="mt-6 mb-2 text-xl font-semibold">Geleerde inzichten</h3>
+          <p>Tijdens deze voorbereiding heb ik geleerd hoe Figma is opgebouwd en hoe flexibel het programma werkt in vergelijking met andere ontwerpsoftware. Ik begrijp nu beter hoe je wireframes maakt, hoe je componenten opbouwt en hoe je interactieve prototypes kunt laten functioneren.</p>
+
+          <h3 class="mt-6 mb-2 text-xl font-semibold">Vooruitblik naar volgende week</h3>
+          <p>Volgende week begin ik met het uitwerken van de schermontwerpen. Dankzij de kennis die ik deze week heb opgedaan, kan ik meteen een gestructureerd Figma-project opzetten. Ik werk de wireframes uit de vorige opdracht digitaal uit en start met het toevoegen van de eerste visuele elementen, met aandacht voor kleurgebruik, typografie, etc.</p>
+        </div>
+      </div>
+
+      <!-- Rechter afbeelding -->
+      <div class="flex justify-center items-start md:items-center">
+        <img src="img/figma.jpg" alt="Figma"
+             class="rounded-lg cursor-pointer clickable-image w-full max-w-[300px] max-h-[500px] object-cover">
+      </div>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center z-50" onclick="this.style.display='none'">
+    <img id="overlay-img" src="" class="max-w-[90%] max-h-[90%] rounded-lg">
   </div>
 
-  <div class="naam">Lotte Charle – 1GDM1</div>
-</header>
-
-
-<main>
-  <div class="container">
-
-    <div class="card left">
-      <img src="img/studay.jpg" alt="Study Day">
-    </div>
-
-    <div class="card center"> <div class="title">Week 2</div> <div class="divider"></div> <div class="subtitle">Kennismaking met Figma</div> <div class="text"> <h3>Opdracht</h3> <p>Deze week vond het event Studay plaats, waardoor er geen lesmoment en geen officiële opdracht voorzien waren. Omdat ik volgende week start met het ontwerpen van de informatieschermen, heb ik deze tijd benut om mij voor te bereiden. Aangezien ik nog geen ervaring had met het programma Figma, heb ik de week gebruikt om me hierin te verdiepen zodat ik volgende week kan starten met het uitwerken van de ontwerpen.</p> <h3>Werkwijze</h3> <p>Ik ben begonnen met het doornemen van het boek “Prototyping – Figma Essentials”, een toegankelijke gids voor beginners die een volledig overzicht biedt van digitale vormgeving en interactieve prototyping in Figma. Het boek leidt je stap voor stap door het ontwerpproces: het opzetten van projecten, het maken van wireframes, het bouwen van interactieve prototypes en het voorbereiden van ontwerpen voor ontwikkeling. Daarnaast behandelt het boek belangrijke thema’s zoals samenwerken in real time, feedback delen, gebruikerstesten en het integreren van Tailwind CSS-concepten in Figma. Ook laat het zien hoe je ontwerpen efficiënt kunt exporteren naar code. Door deze verdieping krijg ik een helder beeld van hoe ik Figma kan gebruiken om professionele digitale producten te ontwerpen en presenteren. </p> <h3>Geleerde inzichten</h3> <p>Tijdens deze voorbereiding heb ik geleerd hoe Figma is opgebouwd en hoe flexibel het programma werkt in vergelijking met andere ontwerpsoftware. Ik begrijp nu beter hoe je wireframes maakt, hoe je componenten opbouwt en hoe je interactieve prototypes kunt laten functioneren. </p> <h3>Vooruitblik naar volgende week</h3> <p>Volgende week begin ik met het uitwerken van de schermontwerpen. Dankzij de kennis die ik deze week heb opgedaan, kan ik meteen een gestructureerd Figma-project opzetten. Ik werk de wireframes uit de vorige opdracht digitaal uit en start met het toevoegen van de eerste visuele elementen, met aandacht voor kleurgebruik, typografie, etc. </p>
-     </div> 
-    </div>
-
-    <div class="card right">
-      <img src="img/figma.jpg" alt="Figma">
-    </div>
-
-  </div>
-</main>
-
-<footer>
-  <p>
+  <!-- FOOTER -->
+  <footer class="bg-[#0d4f4e] p-5 text-center text-sm">
     Laatst gepubliceerde versie van mijn code op Github:
-    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
-  </p>
-</footer>
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline">Github-link</a>
+  </footer>
+
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+    const images = document.querySelectorAll('.clickable-image');
+    const overlay = document.getElementById('overlay');
+    const overlayImg = document.getElementById('overlay-img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        overlay.style.display = 'flex';
+        overlayImg.src = img.src;
+      });
+    });
+  </script>
 
 </body>
 </html>

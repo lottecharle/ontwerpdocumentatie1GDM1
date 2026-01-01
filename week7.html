@@ -5,161 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Week 7 – Tussentijdse toetsen</title>
 
-<style>
-:root{
-    --bg: #1f7a78;
-    --panel: #0d4f4e;
-    --text: #ffffff;
-}
+<!-- Tailwind CSS via CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header {
-  /* verwijder fixed position */
-  /* position: fixed; */
-  /* top: 0; */
-  width: 100%;
-  /* z-index niet meer nodig */
-  background: var(--bg);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.terug-button {
-  display: inline-block;
-  background-color: var(--panel);
-  color: #fff !important;
-  padding: 14px 36px;
-  border-radius: 28px;
-  font-weight: 800;
-  font-size: 20px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-}
-
-.terug-button:hover {
-  background-color: var(--panel-dark);
-  transform: translateY(-2px);
-}
-
-.week-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.week-nav a {
-  color: #fff;
-  text-decoration: underline;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* ================= CONTENT ================= */
-.content-wrapper {
-    max-width: 1100px;
-    margin: 150px auto 80px;
-    background-color: var(--panel);
-    padding: 80px 60px;
-    border-radius: 25px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 56px;
-    font-weight: 900;
-    margin-bottom: 10px;
-}
-
-hr {
-    border: none;
-    border-top: 2px solid rgba(255,255,255,0.5);
-    width: 300px;
-    margin: 20px auto 35px;
-}
-
-h2 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.7;
-    margin: 0 auto 25px;
-    max-width: 900px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background-color: var(--panel);
-    padding: 20px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: auto;
-}
-
-footer a {
-    color: var(--text);
-    text-decoration: underline;
-}
-
-footer a:hover {
-    color: #cceeed;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px){
-    .content-wrapper {
-        padding: 40px 20px;
-    }
-    h1 { font-size: 40px; }
-    h2 { font-size: 26px; }
-    p { font-size: 16px; }
-    .week-nav {
-        top: 80px;
-        left: 20px;
-    }
-}
-</style>
+<!-- Eigen style.css -->
+<link rel="stylesheet" href="style.css">
 </head>
+<body class="bg-[#1f7a78] text-white font-sans flex flex-col min-h-screen">
 
-<body>
-
-<header>
-  <div class="header-left">
+<!-- HEADER -->
+<header class="flex flex-wrap justify-between items-center p-5 bg-[#1f7a78] gap-4">
+  <div class="flex items-center gap-5">
     <a class="terug-button" href="index.html">HOME</a>
-    <nav class="week-nav">
+    <nav class="week-nav flex flex-wrap gap-3">
       <a href="week1.html">Week 1</a>
       <a href="week2.html">Week 2</a>
       <a href="week3.html">Week 3</a>
@@ -175,18 +33,20 @@ footer a:hover {
       <a href="resultaat.html">Resultaat</a>
     </nav>
   </div>
-  <div class="naam">Lotte Charle – 1GDM1</div>
+  <div class="naam font-bold text-lg">Lotte Charle – 1GDM1</div>
 </header>
-<div class="content-wrapper">
-    <h1>Week 7</h1>
-    <hr>
-    <h2>Door de tussentijdse toetsen was er geen les in week 7.</h2>
+
+<!-- CONTENT -->
+<div class="content-wrapper max-w-[1100px] mx-auto my-36 bg-[#0d4f4e] p-20 rounded-3xl text-center">
+  <h1 class="text-4xl font-black mb-4">Week 7</h1>
+  <hr class="border-t-2 border-white/50 w-72 mx-auto my-5">
+  <h2 class="text-2xl font-semibold mt-6 mb-0">Door de tussentijdse toetsen was er geen les in week 7.</h2>
 </div>
 
-<footer>
-    <p>Laatst gepubliceerde versie van mijn code op Github: 
-        <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
-    </p>
+<!-- FOOTER -->
+<footer class="bg-[#0d4f4e] p-5 text-center text-sm mt-auto">
+  Laatst gepubliceerde versie van mijn code op Github: 
+  <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline">Github-link</a>
 </footer>
 
 </body>

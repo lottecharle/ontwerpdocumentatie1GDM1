@@ -4,262 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Week 9 – Mobiele schermen</title>
-<style>
-:root {
-  --bg: #1f7a78;
-  --panel: #0d4f4e;
-  --text: #ffffff;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ================= HEADER ================= */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between; /* ruimte tussen links en rechts */
-  flex-wrap:wrap;
-  padding:20px;
-  gap:16px;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.terug-button {
-    display: inline-block;
-    background-color: var(--panel);
-    color: #fff!important;
-    padding: 14px 36px;
-    border-radius: 28px;
-    font-weight: 800;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
-    transition: transform .12s ease, background-color .12s ease;
-}
-
-.terug-button:hover {
-    background-color: #0b4241;
-    transform: translateY(-2px);
-}
-
-.week-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.week-nav a{
-  color:#fff;
-  text-decoration:underline;
-  font-weight:600;
-  font-size:14px;
-}
-
-.naam{
-  font-weight:700;
-  font-size:16px;
-  color: #fff !important;
-}
-
-/* ================= PAGE ================= */
-.page {
-  width: 90%;
-  max-width: 1200px;
-  margin: 80px auto 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* ================= CONTENT ================= */
-.content {
-  background-color: var(--panel);
-  color: var(--text);
-  border-radius: 30px;
-  padding: 40px;
-}
-
-.content h1 {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.divider {
-  width: 50%;
-  height: 2px;
-  background-color: rgba(255,255,255,0.8);
-  margin: 20px 0 30px 0;
-}
-
-.content h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.content h3 {
-  margin-top: 24px;
-  margin-bottom: 8px;
-  font-size: 20px;
-}
-
-.content p {
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin-bottom: 20px;
-}
-
-/* ================= IMAGES ================= */
-.images {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.images img {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 30px;
-  object-fit: cover;
-  cursor: pointer; /* klikbaar maken */
-}
-
-/* ================= LIGHTBOX OVERLAY ================= */
-#overlay {
-  display: none;
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background: rgba(0,0,0,0.85);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-#overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color: var(--panel);
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: auto;
-}
-
-footer a {
-  color: var(--text);
-  text-decoration: underline;
-}
-footer a:hover {
-  color: #cceeed;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
-  .page {
-    gap: 30px;
-  }
-  .content h1 { font-size: 40px; }
-  .content h2 { font-size: 24px; }
-  .content h3 { font-size: 18px; }
-  .content p { font-size: 15px; }
-  .images img { max-width: 300px; }
-}
-
-@media (max-width: 768px) {
-  .week-nav {
-    top: 90px;
-    left: 20px;
-    justify-content: center;
-  }
-  .content h1 { font-size: 36px; }
-  .content h2 { font-size: 22px; }
-  .content h3 { font-size: 16px; }
-  .content p { font-size: 14px; }
-  .images {
-    gap: 20px;
-  }
-  .images img { max-width: 100%; height: auto; }
-}
-</style>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<header>
-  <div class="header-left">
-    <a class="terug-button" href="index.html">HOME</a>
+<body class="bg-[#1f7a78] text-white min-h-screen flex flex-col">
 
-    <nav class="week-nav">
-      <a href="week1.html">Week 1</a>
-      <a href="week2.html">Week 2</a>
-      <a href="week3.html">Week 3</a>
-      <a href="week4.html">Week 4</a>
-      <a href="week5.html">Week 5</a>
-      <a href="week6.html">Week 6</a>
-      <a href="week7.html">Week 7</a>
-      <a href="week8.html">Week 8</a>
-      <a href="week9.html">Week 9</a>
-      <a href="week10.html">Week 10</a>
-      <a href="week11.html">Week 11</a>
-      <a href="week12.html">Week 12</a>
-      <a href="resultaat.html">Resultaat</a>
+<!-- HEADER -->
+<header class="flex flex-wrap items-center justify-between p-5 gap-4">
+  <div class="flex items-center gap-5">
+    <a href="index.html" class="bg-[#0d4f4e] text-white px-9 py-3 rounded-full font-extrabold text-xl shadow-md hover:bg-[#0b4241] hover:-translate-y-0.5 transition-transform transition-colors">HOME</a>
+    <nav class="flex flex-wrap gap-3">
+      <a href="week1.html" class="underline font-semibold text-sm">Week 1</a>
+      <a href="week2.html" class="underline font-semibold text-sm">Week 2</a>
+      <a href="week3.html" class="underline font-semibold text-sm">Week 3</a>
+      <a href="week4.html" class="underline font-semibold text-sm">Week 4</a>
+      <a href="week5.html" class="underline font-semibold text-sm">Week 5</a>
+      <a href="week6.html" class="underline font-semibold text-sm">Week 6</a>
+      <a href="week7.html" class="underline font-semibold text-sm">Week 7</a>
+      <a href="week8.html" class="underline font-semibold text-sm">Week 8</a>
+      <a href="week9.html" class="underline font-semibold text-sm">Week 9</a>
+      <a href="week10.html" class="underline font-semibold text-sm">Week 10</a>
+      <a href="week11.html" class="underline font-semibold text-sm">Week 11</a>
+      <a href="week12.html" class="underline font-semibold text-sm">Week 12</a>
+      <a href="resultaat.html" class="underline font-semibold text-sm">Resultaat</a>
     </nav>
   </div>
-
-  <div class="naam">Lotte Charle – 1GDM1</div>
+  <div class="font-bold text-lg">Lotte Charle – 1GDM1</div>
 </header>
 
-<div class="page">
-  <div class="content">
-    <h1>Week 9</h1>
-    <div class="divider"></div>
-    <h2>Mobiele schermen</h2> <h3>Opdracht</h3><p>De opdracht bestond erin om de bestaande schermen te vertalen naar mobiele schermen in het programma Figma. Daarbij lag de focus op responsive design, zodat de layout en inhoud zich correct aanpassen aan kleinere schermformaten en de gebruiksvriendelijkheid op mobiele toestellen behouden blijft.</p> <h3>Werkwijze</h3><p>Eerst heb ik nagedacht over hoe ik de bestaande schermen kon aanpassen voor mobiele weergave, waarbij de hiërarchie en structuur behouden moesten blijven. Vervolgens heb ik eerst schetsen op papier gemaakt om een duidelijk overzicht te krijgen van de layout en indeling. Daarna ben ik in Figma aan de slag gegaan om deze schetsen digitaal uit te werken en de schermen geschikt te maken voor mobiele apparaten.</p> <h3>Geleerde inzichten</h3><p>Tijdens deze opdracht heb ik geleerd hoe belangrijk het is om bestaande schermen aan te passen voor mobiele apparaten, zonder de hiërarchie en overzichtelijkheid te verliezen. Ik heb ervaring opgedaan met het maken van schetsen op papier als eerste stap, wat helpt om ideeën snel te visualiseren en structuur te bepalen. Daarnaast heb ik geleerd hoe ik deze schetsen kan vertalen naar digitale ontwerpen in Figma en hoe ik rekening kan houden met responsive design en gebruiksvriendelijkheid op mobiele schermen.</p> <h3>Vooruitblik naar volgende week</h3> <p>Volgende week ga ik verder met het uitwerken van de mobiele schermen en het ontwerpen van de volgende pagina’s in Figma. Ik neem mee wat ik deze week heb geleerd over het behouden van hiërarchie en overzicht bij kleinere schermen, het maken van schetsen als eerste stap en het efficiënt werken in Figma. Door deze werkwijze toe te passen, kan ik de ontwerpen sneller en gestructureerder maken.</p>
+<!-- PAGE CONTENT -->
+<div class="page w-[90%] max-w-[1200px] mx-auto my-20 flex flex-col gap-10">
+
+  <div class="bg-[#0d4f4e] rounded-[30px] p-10 flex flex-col">
+    <h1 class="text-4xl font-bold mb-5">Week 9</h1>
+    <div class="w-1/2 h-[2px] bg-white/80 mb-8"></div>
+    <h2 class="text-2xl font-bold mb-4">Mobiele schermen</h2>
+    
+    <h3 class="text-xl mt-6 mb-2">Opdracht</h3>
+    <p class="text-base leading-relaxed mb-5 opacity-90">
+      De opdracht bestond erin om de bestaande schermen te vertalen naar mobiele schermen in het programma Figma. Daarbij lag de focus op responsive design, zodat de layout en inhoud zich correct aanpassen aan kleinere schermformaten en de gebruiksvriendelijkheid op mobiele toestellen behouden blijft.
+    </p>
+
+    <h3 class="text-xl mt-6 mb-2">Werkwijze</h3>
+    <p class="text-base leading-relaxed mb-5 opacity-90">
+      Eerst heb ik nagedacht over hoe ik de bestaande schermen kon aanpassen voor mobiele weergave, waarbij de hiërarchie en structuur behouden moesten blijven. Vervolgens heb ik eerst schetsen op papier gemaakt om een duidelijk overzicht te krijgen van de layout en indeling. Daarna ben ik in Figma aan de slag gegaan om deze schetsen digitaal uit te werken en de schermen geschikt te maken voor mobiele apparaten.
+    </p>
+
+    <h3 class="text-xl mt-6 mb-2">Geleerde inzichten</h3>
+    <p class="text-base leading-relaxed mb-5 opacity-90">
+      Tijdens deze opdracht heb ik geleerd hoe belangrijk het is om bestaande schermen aan te passen voor mobiele apparaten, zonder de hiërarchie en overzichtelijkheid te verliezen. Ik heb ervaring opgedaan met het maken van schetsen op papier als eerste stap, wat helpt om ideeën snel te visualiseren en structuur te bepalen. Daarnaast heb ik geleerd hoe ik deze schetsen kan vertalen naar digitale ontwerpen in Figma en hoe ik rekening kan houden met responsive design en gebruiksvriendelijkheid op mobiele schermen.
+    </p>
+
+    <h3 class="text-xl mt-6 mb-2">Vooruitblik naar volgende week</h3>
+    <p class="text-base leading-relaxed mb-5 opacity-90">
+      Volgende week ga ik verder met het uitwerken van de mobiele schermen en het ontwerpen van de volgende pagina’s in Figma. Ik neem mee wat ik deze week heb geleerd over het behouden van hiërarchie en overzicht bij kleinere schermen, het maken van schetsen als eerste stap en het efficiënt werken in Figma. Door deze werkwijze toe te passen, kan ik de ontwerpen sneller en gestructureerder maken.
+    </p>
   </div>
 
-  <div class="images">
-    <img src="img/scherm2.jpg" alt="Mobiel scherm 1" class="clickable-image">
-    <img src="img/scherm1.jpg" alt="Mobiel scherm 2" class="clickable-image">
-    <img src="img/scherm3.jpg" alt="Mobiel scherm 3" class="clickable-image">
+  <!-- IMAGES -->
+  <div class="flex flex-wrap gap-8 justify-center">
+    <img src="img/scherm2.jpg" alt="Mobiel scherm 1" class="rounded-[30px] cursor-pointer max-w-[360px] w-full clickable-image object-cover">
+    <img src="img/scherm1.jpg" alt="Mobiel scherm 2" class="rounded-[30px] cursor-pointer max-w-[360px] w-full clickable-image object-cover">
+    <img src="img/scherm3.jpg" alt="Mobiel scherm 3" class="rounded-[30px] cursor-pointer max-w-[360px] w-full clickable-image object-cover">
   </div>
+
 </div>
 
 <!-- LIGHTBOX OVERLAY -->
-<div id="overlay" onclick="this.style.display='none'">
-  <img id="overlay-img" src="">
+<div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center z-50" onclick="this.style.display='none'">
+  <img id="overlay-img" class="rounded-lg max-w-[90%] max-h-[90%]" src="">
 </div>
 
-<footer>
+<!-- FOOTER -->
+<footer class="bg-[#0d4f4e] p-5 text-center text-base mt-auto">
   <p>Laatst gepubliceerde versie van mijn code op Github: 
-    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank" class="underline text-white hover:text-[#cceeed]">Github-link</a>
   </p>
 </footer>
 
+<!-- LIGHTBOX SCRIPT -->
 <script>
 const images = document.querySelectorAll('.clickable-image');
 const overlay = document.getElementById('overlay');
