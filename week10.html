@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 8 – Tailwind CSS</title>
+
+<style>
+:root{
+    --bg: #1f7a78;
+    --panel: #0d4f4e;
+    --text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* ruimte tussen links en rechts */
+  flex-wrap:wrap;
+  padding:20px;
+  gap:16px;
+}
+
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.terug-button {
+    display: inline-block;
+    background-color: var(--panel);
+    color: #fff!important;
+    padding: 14px 36px;
+    border-radius: 28px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
+    transition: transform .12s ease, background-color .12s ease;
+}
+
+.terug-button:hover {
+    background-color: #0b4241;
+    transform: translateY(-2px);
+}
+
+.week-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.week-nav a{
+  color:#fff;
+  text-decoration:underline;
+  font-weight:600;
+  font-size:14px;
+}
+
+.naam{
+  font-weight:700;
+  font-size:16px;
+  color: #fff !important;
+}
+
+/* ================= CONTENT ================= */
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 60px;
+    background-color: var(--panel);
+    border-radius: 25px;
+    padding: 60px 40px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 220px;
+    height: 2px;
+    background-color: rgba(255,255,255,0.9);
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: var(--panel);
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #cceeed;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .page {
+        padding: 50px 30px;
+    }
+    h1 { font-size: 40px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 18px; }
+    p { font-size: 15px; }
+}
+
+@media (max-width: 768px) {
+    .week-nav {
+        top: 90px;
+        left: 20px;
+        justify-content: center;
+    }
+    .page {
+        width: 95%;
+        padding: 40px 20px;
+        margin-top: 160px;
+    }
+    h1 { font-size: 36px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 16px; }
+    p { font-size: 14px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a class="terug-button" href="index.html">HOME</a>
+
+    <nav class="week-nav">
+      <a href="week1.html">Week 1</a>
+      <a href="week2.html">Week 2</a>
+      <a href="week3.html">Week 3</a>
+      <a href="week4.html">Week 4</a>
+      <a href="week5.html">Week 5</a>
+      <a href="week6.html">Week 6</a>
+      <a href="week7.html">Week 7</a>
+      <a href="week8.html">Week 8</a>
+      <a href="week9.html">Week 9</a>
+      <a href="week10.html">Week 10</a>
+      <a href="week11.html">Week 11</a>
+      <a href="week12.html">Week 12</a>
+      <a href="resultaat.html">Resultaat</a>
+    </nav>
+  </div>
+
+  <div class="naam">Lotte Charle – 1GDM1</div>
+</header>
+
+
+<div class="page">
+ <h1>Week 10</h1>
+      <div class="divider"></div> 
+<h2>Verder werken mobiele schermen</h2>
+      <div class="text"> 
+        <h3>Opdracht</h3> 
+        <p>Deze opdracht deze week bestond uit het verder werken aan de mobiele schermen en ervoor zorgen dat de drie treinschermen zo goed als volledig zijn uitgewerkt, zodat er de week erop interactieve elementen aan toegevoegd kunnen worden. Daarnaast werd gevraagd om extra pagina’s te ontwerpen naast de drie treinschermen. Voorbeelden hiervan zijn een meervoudig invulformulier voor user creation en login, evenals het implementeren van een zoekpagina met formulieren voor treinverbindingen en stations. Deze uitbreidingen zorgen voor een completer en realistischer gebruikersproces binnen de applicatie.</p> 
+        <h3>Werkwijze</h3> 
+        <p>Deze week ben ik te werk gegaan door de bestaande mobiele schermen verder uit te werken en te verbeteren. Er is geëxperimenteerd met typografie, kleuren en indelingen om de schermen duidelijker en gebruiksvriendelijker te maken. Door dit proces stap voor stap te doorlopen, is een sterke basis gelegd voor het toevoegen van interactieve elementen in de volgende fase.</p> 
+        <h3>Geleerde inzichten</h3> 
+        <p>Ik heb geleerd dat een duidelijke indeling en visuele hiërarchie cruciaal zijn voor gebruiksvriendelijkheid. Experimenteren met typografie en kleuren liet zien hoe kleine aanpassingen het overzicht en de leesbaarheid sterk kunnen verbeteren. Tijdens deze opdracht heb ik ook geleerd hoe belangrijk duidelijke en intuïtieve interacties zijn binnen mobiele schermontwerpen. Het toevoegen van extra pagina’s, zoals formulieren voor user creation, login en het zoeken van treinverbindingen, maakte duidelijk dat een logisch opgebouwde flow essentieel is voor een goede gebruikerservaring. </p> 
+        <h3>Vooruitblik naar volgende week</h3> 
+        <p>Volgende week ligt de focus op het toevoegen van interactieve elementen aan de mobiele schermen. Het doel is om de gebruikersflow verder te testen en te verbeteren, zodat de app gebruiksvriendelijker wordt. Daarnaast zal ik kleine aanpassingen blijven doorvoeren indien nodig om de schermen visueel en functioneel verder te optimaliseren.</p>
+      </div>
+</div>
+
+
+<footer>
+    <p>Laatst gepubliceerde versie van mijn code op Github: 
+        <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+    </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 2</title>
+
+<style>
+/* ================= BASIS ================= */
+:root{
+  --bg:#1f7a78;
+  --panel:#0d4f4e;
+  --panel-dark:#0b4241;
+  --text:#ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* ruimte tussen links en rechts */
+  flex-wrap:wrap;
+  padding:20px;
+  gap:16px;
+}
+
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.terug-button {
+    display: inline-block;
+    background-color: var(--panel);
+    color: #fff!important;
+    padding: 14px 36px;
+    border-radius: 28px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
+    transition: transform .12s ease, background-color .12s ease;
+}
+
+.terug-button:hover {
+    background-color: #0b4241;
+    transform: translateY(-2px);
+}
+
+.week-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.week-nav a{
+  color:#fff;
+  text-decoration:underline;
+  font-weight:600;
+  font-size:14px;
+}
+
+.naam{
+  font-weight:700;
+  font-size:16px;
+  color: #fff !important;
+}
+
+/* ================= MAIN ================= */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card.left img,
+.card.right img {
+  width: 80%;
+  height: auto;
+}
+
+.card.center {
+  flex: 1.6;
+  background: var(--panel);
+  color: white;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ================= TEKST ================= */
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.divider {
+  height: 2px;
+  width: 42%;
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.text p {
+  margin: 0 0 16px;
+  line-height: 1.6;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--panel);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .card.center {
+    order: -1;
+    flex: 1 1 100%;
+  }
+
+  .card.left,
+  .card.right {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main {
+    padding-top: 180px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card.left img,
+  .card.right img {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a class="terug-button" href="index.html">HOME</a>
+
+    <nav class="week-nav">
+      <a href="week1.html">Week 1</a>
+      <a href="week2.html">Week 2</a>
+      <a href="week3.html">Week 3</a>
+      <a href="week4.html">Week 4</a>
+      <a href="week5.html">Week 5</a>
+      <a href="week6.html">Week 6</a>
+      <a href="week7.html">Week 7</a>
+      <a href="week8.html">Week 8</a>
+      <a href="week9.html">Week 9</a>
+      <a href="week10.html">Week 10</a>
+      <a href="week11.html">Week 11</a>
+      <a href="week12.html">Week 12</a>
+      <a href="resultaat.html">Resultaat</a>
+    </nav>
+  </div>
+
+  <div class="naam">Lotte Charle – 1GDM1</div>
+</header>
+
+
+<main>
+  <div class="container">
+
+    <div class="card left">
+      <img src="img/studay.jpg" alt="Study Day">
+    </div>
+
+    <div class="card center"> <div class="title">Week 2</div> <div class="divider"></div> <div class="subtitle">Kennismaking met Figma</div> <div class="text"> <h3>Opdracht</h3> <p>Deze week vond het event Studay plaats, waardoor er geen lesmoment en geen officiële opdracht voorzien waren. Omdat ik volgende week start met het ontwerpen van de informatieschermen, heb ik deze tijd benut om mij voor te bereiden. Aangezien ik nog geen ervaring had met het programma Figma, heb ik de week gebruikt om me hierin te verdiepen zodat ik volgende week kan starten met het uitwerken van de ontwerpen.</p> <h3>Werkwijze</h3> <p>Ik ben begonnen met het doornemen van het boek “Prototyping – Figma Essentials”, een toegankelijke gids voor beginners die een volledig overzicht biedt van digitale vormgeving en interactieve prototyping in Figma. Het boek leidt je stap voor stap door het ontwerpproces: het opzetten van projecten, het maken van wireframes, het bouwen van interactieve prototypes en het voorbereiden van ontwerpen voor ontwikkeling. Daarnaast behandelt het boek belangrijke thema’s zoals samenwerken in real time, feedback delen, gebruikerstesten en het integreren van Tailwind CSS-concepten in Figma. Ook laat het zien hoe je ontwerpen efficiënt kunt exporteren naar code. Door deze verdieping krijg ik een helder beeld van hoe ik Figma kan gebruiken om professionele digitale producten te ontwerpen en presenteren. </p> <h3>Geleerde inzichten</h3> <p>Tijdens deze voorbereiding heb ik geleerd hoe Figma is opgebouwd en hoe flexibel het programma werkt in vergelijking met andere ontwerpsoftware. Ik begrijp nu beter hoe je wireframes maakt, hoe je componenten opbouwt en hoe je interactieve prototypes kunt laten functioneren. </p> <h3>Vooruitblik naar volgende week</h3> <p>Volgende week begin ik met het uitwerken van de schermontwerpen. Dankzij de kennis die ik deze week heb opgedaan, kan ik meteen een gestructureerd Figma-project opzetten. Ik werk de wireframes uit de vorige opdracht digitaal uit en start met het toevoegen van de eerste visuele elementen, met aandacht voor kleurgebruik, typografie, etc. </p>
+     </div> 
+    </div>
+
+    <div class="card right">
+      <img src="img/figma.jpg" alt="Figma">
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>
+    Laatst gepubliceerde versie van mijn code op Github:
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+  </p>
+</footer>
+
+</body>
+</html>

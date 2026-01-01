@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resultaat</title>
+
+<style>
+/* ================= BASIS ================= */
+:root{
+  --bg:#1f7a78;
+  --panel:#0d4f4e;
+  --panel-dark:#0b4241;
+  --white:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--white);
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* ruimte tussen links en rechts */
+  flex-wrap:wrap;
+  padding:20px;
+  gap:16px;
+}
+
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.terug-button {
+    display: inline-block;
+    background-color: var(--panel);
+    color: #fff!important;
+    padding: 14px 36px;
+    border-radius: 28px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 6px 0 rgba(0,0,0,0.12);
+    transition: transform .12s ease, background-color .12s ease;
+}
+
+.terug-button:hover {
+    background-color: #0b4241;
+    transform: translateY(-2px);
+}
+
+.week-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.week-nav a{
+  color:#fff;
+  text-decoration:underline;
+  font-weight:600;
+  font-size:14px;
+}
+
+.naam{
+  font-weight:700;
+  font-size:16px;
+  color: #fff !important;
+}
+
+/* ================= RESULTAAT CARD ================= */
+.main-wrapper{
+  display:flex;
+  justify-content:center;
+  padding:40px 20px 60px;
+}
+
+.card{
+  width:100%;
+  max-width:1100px;
+  min-height:70vh;
+  background-color: var(--panel);
+  border-radius:40px;
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.card h1{
+  font-size:56px;
+  margin:0;
+}
+
+.divider{
+  width:240px;
+  height:2px;
+  background-color:#fff;
+  margin:24px 0;
+  opacity:0.8;
+}
+
+.card h2{
+  font-size:32px;
+  margin-bottom:48px;
+}
+
+.content{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  max-width:700px;
+}
+
+.button {
+  display: inline-block;
+  background-color:#0f1f1c;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:14px 28px;
+  font-size:16px;
+  text-decoration:none; /* verwijdert onderstreping */
+  cursor:pointer;
+  text-align:center;
+}
+
+.button:hover {
+  background-color:#162d28;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background-color: var(--panel);
+  padding:20px;
+  text-align:center;
+  font-size:14px;
+}
+
+footer a{
+  color:#fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px){
+  .card h1{font-size:36px;}
+  .card h2{font-size:24px;}
+}
+</style>
+</head>
+
+<body>
+  
+
+<header>
+  <div class="header-left">
+    <a class="terug-button" href="index.html">HOME</a>
+    <nav class="week-nav">
+      <a href="week1.html">Week 1</a>
+      <a href="week2.html">Week 2</a>
+      <a href="week3.html">Week 3</a>
+      <a href="week4.html">Week 4</a>
+      <a href="week5.html">Week 5</a>
+      <a href="week6.html">Week 6</a>
+      <a href="week7.html">Week 7</a>
+      <a href="week8.html">Week 8</a>
+      <a href="week9.html">Week 9</a>
+      <a href="week10.html">Week 10</a>
+      <a href="week11.html">Week 11</a>
+      <a href="week12.html">Week 12</a>
+      <a href="resultaat.html">Resultaat</a>
+    </nav>
+  </div>
+  <div class="naam">Lotte Charle – 1GDM1</div>
+</header>
+
+<main class="main-wrapper">
+  <section class="card">
+    <h1>Resultaat</h1>
+    <div class="divider"></div>
+    <h2>Eindreflectie en uiteindelijke resultaat</h2>
+    <p>Na twaalf weken werken en reflecteren is het project afgerond. Met de feedback van docenten, medestudenten en de doelgroep, samen met de inzichten uit het logboek, heb ik het ontwerp stap voor stap aangepast en verfijnt. Hierdoor zijn de drie schermen verder uitgewerkt en is de app uiteindelijk tot een duidelijk resultaat gekomen. </p>
+    <p>Zo zijn alle kleuren en dezelfde typografie doorgevoerd, waardoor de app nu één duidelijke en herkenbare stijl heeft zoals de drie treinschermen. 
+Daarnaast heb ik gebruikgemaakt van iconen uit Figma zelf. Dit zorgde niet alleen voor een consistente uitstraling, maar ook voor een professionele en overzichtelijke interface.
+Om de gebruikservaring te verbeteren heb ik de app volledig interactief uitgewerkt. Hierdoor kon ik de flow van het gebruik testen en beter begrijpen hoe gebruikers door de app navigeren. Deze interactieve versie maakte het mogelijk om het uiteindelijke ontwerp realistisch te evalueren. Na het afronden van de interactieve versie heb ik het eindresultaat opnieuw getest bij gebruikers. Uit deze testen bleek dat sommige elementen nog niet duidelijk genoeg waren, waardoor ik extra aanpassingen heb doorgevoerd. Zo heb ik op enkele schermen opnieuw knoppen toegevoegd om de navigatie gebruiksvriendelijker te maken.  Als laatste heb ik de wagonindeling toegevoegd op het perronscherm en neit als apart scherm in de app omdat het me een logischere keuze leek om deze twee samen te voegen. Daarom heb ik een extra scherm toegevoegd met informatie over de treinreis.
+</p><p>Terugkijkend op dit proces ben ik tevreden met het eindresultaat. Door voortdurend te testen, feedback te verwerken en het project stap voor stap verder uit te werken, zijn de drie treinschermen en de rest van de app niet alleen visueel sterker geworden, maar ook functioneel en gebruiksvriendelijker. Dit project heeft mij geleerd hoe belangrijk consistentie, interactie en gebruikerstesten zijn binnen een ontwerpproces.</p>
+
+    <div class="content">
+    
+    </div>
+
+<a href="afbeeldingen.html" class="button">afbeeldingen</a>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Laatst gepubliceerde versie op Github:
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+  </p>
+</footer>
+
+</body>
+</html>

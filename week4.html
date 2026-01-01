@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 4 – HTML ervaring</title>
+
+<style>
+/* ================= BASIS ================= */
+:root{
+  --bg:#1f7a78;
+  --panel:#0d4f4e;
+  --panel-dark:#0b4241;
+  --text:#ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= HEADER ================= */
+header {
+  /* verwijder fixed position */
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  /* z-index niet meer nodig */
+  background: var(--bg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.terug-button {
+  display: inline-block;
+  background-color: var(--panel);
+  color: #fff !important;
+  padding: 14px 36px;
+  border-radius: 28px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.12);
+}
+
+.terug-button:hover {
+  background-color: var(--panel-dark);
+  transform: translateY(-2px);
+}
+
+.week-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.week-nav a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.naam{
+  font-weight:700;
+  font-size:16px;
+  color: #fff !important;
+}
+
+
+/* ================= MAIN ================= */
+main {
+  flex: 1;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  max-width: 1100px;
+  background-color: var(--panel);
+  padding: 80px 60px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgba(255,255,255,0.5);
+  width: 300px;
+  margin: 20px auto 35px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 28px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0 auto 25px;
+  max-width: 900px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background-color: var(--panel);
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main {
+    padding-top: 180px;
+  }
+
+  .content-wrapper {
+    padding: 40px 20px;
+  }
+
+  h1 { font-size: 40px; }
+  h2 { font-size: 26px; }
+  h3 { font-size: 18px; }
+  p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a class="terug-button" href="index.html">HOME</a>
+    <nav class="week-nav">
+      <a href="week1.html">Week 1</a>
+      <a href="week2.html">Week 2</a>
+      <a href="week3.html">Week 3</a>
+      <a href="week4.html">Week 4</a>
+      <a href="week5.html">Week 5</a>
+      <a href="week6.html">Week 6</a>
+      <a href="week7.html">Week 7</a>
+      <a href="week8.html">Week 8</a>
+      <a href="week9.html">Week 9</a>
+      <a href="week10.html">Week 10</a>
+      <a href="week11.html">Week 11</a>
+      <a href="week12.html">Week 12</a>
+      <a href="resultaat.html">Resultaat</a>
+    </nav>
+  </div>
+  <div class="naam">Lotte Charle – 1GDM1</div>
+</header>
+
+
+<main>
+ <div class="content-wrapper"> <h1>Week 4</h1> <hr> <h2>Eerste ervaring met HTML en verfijning van schermontwerpen</h2> <h3>Feedback</h3> <p> Op basis van de feedback van docenten en medestudenten heb ik inzicht gekregen in belangrijke verbeterpunten van mijn ontwerp. De docenten gaven aan dat ik de briefing opnieuw moet bekijken, omdat sommige onderdelen die daarin beschreven stonden nog ontbreken op de schermen. Medestudenten wezen erop dat het scherm momenteel vrij druk oogt en dat niet duidelijk genoeg is welke informatie het belangrijkst is. Daarnaast werd aangegeven dat de typografie op sommige plekken niet goed leesbaar is, wat de usability beïnvloedt, vooral bij het herkennen van extra voorzieningen in de trein. Naar aanleiding van deze feedback heb ik besloten om keuzes te maken in welke informatie ik laat opvallen en het aantal kleuren te beperken, zodat het ontwerp overzichtelijker en gebruiksvriendelijker wordt. </p> <h3>Opdracht</h3> <p>Als eerst heb ik de feedback op mijn schermontwerpen toegepast. Daarna ben ik gestart met de opdracht van deze week, die bestond uit een eerste kennismaking met HTML en CSS. Het doel hiervan was om kennis op te doen en het programma te leren kennen, zodat ik dit later kan gebruiken om mijn ontwerpdocumentatie op een gestructureerde en overzichtelijke manier digitaal uit te werken. <p> <h3>Werkwijze</h3> <p>Als werkwijze heb ik gebruikgemaakt van YouTube-video’s en het lesmateriaal dat binnen het vak beschikbaar werd gesteld, zodat ik stap voor stap kon leren hoe webpagina’s worden opgebouwd en gestyled.</p> <h3>Geleerde inzichten</h3><p>Door hiermee te werken heb ik inzicht gekregen in hoe HTML wordt gebruikt voor de structuur van een pagina en hoe CSS zorgt voor de opmaak en lay-out. Daarnaast heb ik geleerd hoe ontwerpkeuzes uit Figma kunnen worden vertaald naar een werkende webpagina en hoe kleine aanpassingen in CSS een grote invloed hebben op het eindresultaat.</p> <h3>Vooruitblik naar volgende week</h3> <p>Deze kennis neem ik mee naar volgende week door bewuster na te denken over de vertaling van mijn ontwerpen naar code en door verder te oefenen met HTML en CSS om mijn pagina’s overzichtelijker, consistenter en gebruiksvriendelijker te maken.</p> 
+</div>
+</main>
+
+<footer>
+  <p>
+    Laatst gepubliceerde versie van mijn code op Github: 
+    <a href="https://github.com/jouw-gebruikersnaam/repo" target="_blank">Github-link</a>
+  </p>
+</footer>
+
+</body>
+</html>

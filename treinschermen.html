@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinborden</title>
+
+    <style>
+        body {
+            background: repeating-linear-gradient(
+                to right,
+                #f7f2e7,
+                #f7f2e7 50px,
+                #d7d1c0 50px,
+                #d7d1c0 100px
+            );
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        /* Terug knop */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 18px;
+            background-color: #b0b0b0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background-color: #767676;
+        }
+
+        /* Afbeeldingen + tekst */
+        .foto-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 0;
+        }
+
+        figure img {
+            width: 360px;   
+            height: auto;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="window.location.href='index.html';" class="back-btn">Terug</button>
+
+    <h1>Treinborden</h1>
+
+    <div class="foto-container">
+
+        <figure>
+            <img src="img/04.jpg" alt="Treinbord">
+            <figcaption>Vertrekbord</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/02.jpg" alt="Treinbord">
+            <figcaption>Perronbord</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img/03.jpg" alt="Treinbord">
+            <figcaption>Reisinformatie</figcaption>
+        </figure>
+
+    </div>
+
+</body>
+</html>
